@@ -1,0 +1,18 @@
+.card{
+    padding: 1.5rem;
+    border: 1px solid #c8c8ce;
+    border-radius: 0.75rem;
+    background-color: #D9C8C8;
+}
+
+.content{
+    width: max(1100px, 92%);
+    margin-inline: auto;
+    gap: 1.5rem;
+}
+
+img{
+    width: 37%;
+    border-radius: 20px;
+}
+
