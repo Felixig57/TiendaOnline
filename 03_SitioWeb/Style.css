@@ -1,0 +1,1168 @@
+@import url("https://fonts.googleapis.com/css2?family=Freeman&family=Fresca&family=Goudy+Bookletter+1911&family=Konkhmer+Sleokchher&family=Montserrat:wght@400;700&family=Murecho:wght@300&display=swap");
+
+/* =========================================
+   1. BASE DEL SITIO
+   ========================================= */
+
+:root {
+  --crema: #f3eee9;
+  --verde: #2d5a3d;
+  --verde-oscuro: #1c4e1c;
+  --verde-profundo: #102a17;
+  --verde-claro: #6aa84b;
+  --verde-suave: #80b65f;
+  --verde-catalogo: #147645;
+  --texto-secundario: #5c6b60;
+
+  --rosa: #d9c8c8;
+  --lavanda: #d1bcd0;
+  --campo: #faf6f6;
+  --gris: #a3a3a3;
+  --vino: #550000;
+
+  --fuente-principal: "Freeman", sans-serif;
+  --fuente-formulario: "Montserrat", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--crema);
+  color: var(--verde);
+  font-family: var(--fuente-principal);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button,
+a,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--verde-suave);
+  outline-offset: 4px;
+}
+
+.pagina {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+/* =========================================
+   2. ENCABEZADO COMPARTIDO
+   Inicio, Catálogo y Contacto
+   ========================================= */
+
+.encabezado {
+  min-height: 105px;
+  padding: 0 49px 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  background: var(--crema);
+}
+
+.encabezado__logo {
+  width: 108px;
+  height: 110px;
+  object-fit: contain;
+}
+
+.encabezado__derecha,
+.navegacion {
+  display: flex;
+  align-items: center;
+}
+
+.encabezado__derecha {
+  gap: 20px;
+}
+
+.navegacion {
+  gap: 19px;
+}
+
+.navegacion a {
+  position: relative;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.navegacion a[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  left: 0;
+  height: 2px;
+  background: #6baa4a;
+}
+
+.boton-cotizar {
+  width: 185px;
+  min-height: 60px;
+  padding: 14px 16px;
+  border: 0;
+  border-radius: 21px;
+  background: var(--verde-claro);
+  color: var(--verde-oscuro);
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 20px;
+}
+
+.boton-cotizar img {
+  width: 32px;
+  height: 32px;
+}
+
+/* =========================================
+   3. INICIO
+   ========================================= */
+
+.inicio {
+  min-height: 1024px;
+}
+
+.inicio .encabezado {
+  background: var(--verde);
+  color: #fff;
+}
+
+.inicio__hero {
+  padding: 151px 49px 150px 68px;
+  display: grid;
+  grid-template-columns: minmax(0, 768px) minmax(0, 508px);
+  gap: 47px;
+  align-items: start;
+}
+
+.inicio__contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.inicio__etiqueta {
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.inicio__titulo {
+  max-width: 768px;
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.inicio__descripcion {
+  max-width: 768px;
+  color: var(--texto-secundario);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.inicio__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.boton {
+  min-height: 52px;
+  padding: 15px 22px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--fuente-formulario);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.boton--principal {
+  background: linear-gradient(90deg, #6baa4a, #80b65f);
+  color: var(--verde-profundo);
+}
+
+.boton--secundario {
+  border-color: var(--verde);
+  background: var(--crema);
+  color: var(--verde);
+}
+
+.inicio__nota {
+  color: var(--verde);
+  font-family: var(--fuente-formulario);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.inicio__foto {
+  position: relative;
+  height: 618px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.inicio__foto > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inicio__foto-texto {
+  position: absolute;
+  right: 17px;
+  bottom: 53px;
+  left: 17px;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgb(243 238 233 / 95%);
+  display: grid;
+  gap: 4px;
+}
+
+.inicio__foto-texto small {
+  font-size: 11px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.inicio__foto-texto p {
+  font-size: 18px;
+}
+
+/* =========================================
+   4. CATÁLOGO
+   ========================================= */
+
+.catalogo__hero {
+  position: relative;
+  min-height: 509px;
+  background: url("imagenes/vinedo.jpg") center / cover no-repeat;
+}
+
+.catalogo__hero .encabezado {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+
+.catalogo__titulo {
+  padding-top: 122px;
+  color: var(--verde-claro);
+  font-size: 128px;
+  font-weight: 400;
+  text-align: center;
+  text-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+}
+
+.catalogo__buscador {
+  margin: 177px 115px 177px 73px;
+  min-height: 109px;
+  padding: 20px 38px 20px 65px;
+  border-radius: 30px;
+  background: var(--verde-claro);
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.catalogo__buscador label {
+  color: var(--verde-oscuro);
+  font-family: "Goudy Bookletter 1911", serif;
+  font-size: 64px;
+}
+
+.catalogo__campo {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.catalogo__campo input {
+  width: 100%;
+  height: 52px;
+  padding: 8px 70px 8px 20px;
+  border: 1px solid #000;
+  border-radius: 15px;
+  background: var(--verde-suave);
+  color: var(--verde-oscuro);
+  font-size: 24px;
+}
+
+.catalogo__campo button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 52px;
+  height: 52px;
+  transform: translateY(-50%);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--verde-oscuro);
+}
+
+.catalogo__grid {
+  padding: 0 115px 80px 114px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 500px));
+  justify-content: space-between;
+  column-gap: 40px;
+  row-gap: 110px;
+}
+
+.tarjeta-uva__imagen {
+  width: 100%;
+  height: 284px;
+  padding: 6px 10px;
+  border: 3px solid rgb(0 0 0 / 30%);
+  border-radius: 30px;
+  background: var(--lavanda);
+}
+
+.tarjeta-uva__imagen img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+.tarjeta-uva__nombre {
+  margin: 18px 0 0 19px;
+  color: var(--verde-catalogo);
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.tarjeta-uva--cotton .tarjeta-uva__nombre {
+  letter-spacing: 0;
+}
+
+/* =========================================
+   5. SEIS PÁGINAS DE PRODUCTO
+   Usa .producto más una clase de variedad.
+   ========================================= */
+
+.producto--cotton {
+  --foto-producto: url("imagenes/cotton-candy.jpg");
+}
+
+.producto--summer {
+  --foto-producto: url("imagenes/summer-royals.jpg");
+}
+
+.producto--candy {
+  --foto-producto: url("imagenes/candy-hearts.jpg");
+}
+
+.producto--prime {
+  --foto-producto: url("imagenes/prime-seedless.jpg");
+}
+
+.producto--sweet {
+  --foto-producto: url("imagenes/sweet-sapphire.jpg");
+}
+
+.producto--sugraones {
+  --foto-producto: url("imagenes/sugraones.jpg");
+}
+
+.producto {
+  position: relative;
+  isolation: isolate;
+  min-height: 1024px;
+  padding: 139px 24px 70px;
+  overflow: hidden;
+  background: #fff;
+  color: var(--verde-oscuro);
+}
+
+.producto::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -60px;
+  background-image: var(--foto-producto);
+  background-position: center;
+  background-size: cover;
+  filter: blur(30px);
+}
+
+.producto__tarjeta {
+  width: min(606px, 100%);
+  min-height: 815px;
+  margin-inline: auto;
+  padding: 28px 26px 50px 39px;
+  border-radius: 20px;
+  background-color: var(--rosa);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 49px,
+    rgb(194 129 129 / 61%) 49px,
+    rgb(194 129 129 / 61%) 51px,
+    transparent 51px,
+    transparent 100px
+  );
+}
+
+.producto--cotton,
+.producto--summer {
+  padding-top: 136px;
+}
+
+.producto__foto {
+  width: 100%;
+  height: 272px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.producto__categoria {
+  margin-top: 8px;
+  font-size: 16px;
+  letter-spacing: 0.07em;
+}
+
+.producto__nombre {
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.producto__descripcion {
+  margin-top: 26px;
+  color: #3f2222;
+  font-family: "Murecho", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+.producto__informacion {
+  margin-top: 15px;
+  margin-left: -7px;
+  padding: 19px 29px 26px;
+  min-height: 283px;
+  border-radius: 20px;
+  background: var(--campo);
+}
+
+.producto__subtitulo {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+.producto__meses {
+  margin-top: 21px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.producto__mes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+}
+
+.producto__mes::before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  border: 2px solid var(--verde-oscuro);
+  border-radius: 50%;
+  background: transparent;
+}
+
+/* Meses disponibles observados en el diseño. */
+.producto--cotton .producto__mes:nth-child(n + 3):nth-child(-n + 6)::before,
+.producto--summer .producto__mes:nth-child(5)::before,
+.producto--summer .producto__mes:nth-child(6)::before,
+.producto--candy .producto__mes:nth-child(n + 3):nth-child(-n + 5)::before,
+.producto--prime .producto__mes:nth-child(5)::before,
+.producto--sweet .producto__mes:nth-child(n + 3):nth-child(-n + 5)::before,
+.producto--sugraones .producto__mes:nth-child(6)::before {
+  background: #808e80;
+}
+
+.producto__presentacion {
+  margin-top: 48px;
+}
+
+.producto__bolsa {
+  margin-top: 15px;
+  width: 48px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.producto__bolsa img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.producto__anterior,
+.producto__siguiente {
+  position: absolute;
+  bottom: 38px;
+  width: 176px;
+  min-height: 64px;
+  border: 0;
+  border-radius: 20px;
+  background: var(--rosa);
+  color: var(--verde-oscuro);
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+}
+
+.producto__anterior {
+  left: 49px;
+}
+
+.producto__siguiente {
+  right: 49px;
+}
+
+.producto--sweet .producto__categoria,
+.producto--sugraones .producto__categoria,
+.producto--prime .producto__disponibilidad,
+.producto--candy .producto__mes:last-child {
+  font-family: "Konkhmer Sleokchher", sans-serif;
+}
+
+/* =========================================
+   6. NOSOTROS
+   Las curvas son una aproximación en CSS.
+   ========================================= */
+
+.nosotros {
+  color: #000;
+}
+
+.nosotros__hero {
+  min-height: 1100px;
+  padding: 275px 56px 160px;
+  background: url("imagenes/nosotros-portada.jpg") center / cover no-repeat;
+  color: #d9d9d9;
+}
+
+.nosotros__titulo {
+  font-size: 150px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.nosotros__introduccion {
+  max-width: 1145px;
+  margin: 125px auto 0;
+  font-size: 28px;
+  line-height: 1.4;
+}
+
+.historia {
+  position: relative;
+  padding: 40px 56px;
+}
+
+.historia--verde {
+  background: var(--verde-claro);
+  border-radius: 50% 12% 50% 8% / 6% 5% 7% 4%;
+}
+
+.historia--primera {
+  margin-top: -170px;
+}
+
+.historia__fila {
+  min-height: 480px;
+  display: grid;
+  grid-template-columns: minmax(0, 465px) minmax(0, 851px);
+  align-items: center;
+  gap: 14px;
+}
+
+.historia__fila--inversa {
+  grid-template-columns: minmax(0, 851px) minmax(0, 465px);
+  gap: 45px;
+}
+
+.historia__fecha {
+  color: var(--verde-profundo);
+  font-size: 150px;
+  font-weight: 400;
+}
+
+.historia__texto {
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.historia__foto {
+  width: 100%;
+  height: 386px;
+  border: 8px solid var(--verde-profundo);
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+.historia__foto--alta {
+  height: 542px;
+}
+
+.pie {
+  padding: 125px 89px 100px;
+  min-height: 700px;
+  border-radius: 50% 10% 0 0 / 8% 5% 0 0;
+  background: var(--vino);
+  color: #fff;
+  display: grid;
+  grid-template-columns: 352px 1fr 1fr;
+  gap: 61px;
+}
+
+.pie__logo {
+  width: 352px;
+  height: 326px;
+  object-fit: contain;
+}
+
+.pie__marca {
+  font-size: 20px;
+}
+
+.pie__legal {
+  margin-top: 12px;
+  font-size: 15px;
+}
+
+.pie__ubicaciones {
+  display: flex;
+  flex-direction: column;
+  gap: 125px;
+  font-size: 40px;
+}
+
+.pie__titulo {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.pie__redes {
+  margin-top: 34px;
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+
+.pie__redes img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+
+/* =========================================
+   7. CONTACTO
+   ========================================= */
+
+.contacto__contenido {
+  min-height: 919px;
+  display: grid;
+  grid-template-columns: minmax(0, 617px) minmax(0, 1fr);
+  gap: 56px;
+}
+
+.contacto__foto {
+  width: 100%;
+  height: 919px;
+  border-radius: 0 64px 64px 0;
+  object-fit: cover;
+}
+
+.contacto__principal {
+  padding: 37px 29px 33px 0;
+}
+
+.contacto__titulo {
+  color: var(--verde-oscuro);
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.contacto__formulario {
+  margin-top: 44px;
+  min-height: 741px;
+  padding: 40px 45px 18px;
+  background: var(--crema);
+  backdrop-filter: blur(4px);
+  color: var(--verde-oscuro);
+  font-family: var(--fuente-formulario);
+  font-size: 24px;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.contacto__campos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 260px));
+  justify-content: space-between;
+  gap: 12px 30px;
+}
+
+.contacto__campo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.contacto__campo input,
+.contacto__campo textarea {
+  width: 100%;
+  min-height: 60px;
+  padding: 16px 19px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--campo);
+  color: var(--verde-oscuro);
+  font-size: 24px;
+}
+
+.contacto__campo input::placeholder,
+.contacto__campo textarea::placeholder {
+  color: var(--gris);
+  opacity: 1;
+}
+
+.contacto__requerido {
+  color: #e53935;
+}
+
+.contacto__departamentos {
+  margin: 16px 0 32px;
+  padding: 0;
+  border: 0;
+}
+
+.contacto__departamentos legend {
+  margin-bottom: 12px;
+}
+
+.contacto__opciones {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 12px;
+}
+
+.contacto__opcion {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contacto__opcion input {
+  appearance: none;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  border-radius: 50%;
+  background: var(--campo);
+}
+
+.contacto__opcion input:checked {
+  border: 6px solid var(--campo);
+  background: var(--verde);
+}
+
+.contacto__mensaje {
+  max-width: 485px;
+}
+
+.contacto__mensaje textarea {
+  min-height: 159px;
+  resize: vertical;
+}
+
+.contacto__enviar {
+  margin-top: 61px;
+  margin-left: auto;
+  width: 234px;
+  min-height: 65px;
+  padding: 15px 24px;
+  border: 0;
+  border-radius: 35px;
+  background: var(--verde-claro);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: "Fresca", sans-serif;
+  font-size: 24px;
+  letter-spacing: -1px;
+}
+
+/* =========================================
+   8. ADAPTACIÓN RESPONSIVE PROPUESTA
+   ========================================= */
+
+@media (max-width: 1100px) {
+  .encabezado {
+    padding-inline: 24px;
+    flex-wrap: wrap;
+  }
+
+  .encabezado__derecha {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .inicio__hero {
+    padding: 80px 32px;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 32px;
+  }
+
+  .inicio__titulo {
+    font-size: 44px;
+  }
+
+  .catalogo__buscador {
+    margin: 80px 32px;
+    padding: 20px 28px;
+  }
+
+  .catalogo__grid {
+    padding-inline: 32px;
+    gap: 64px 40px;
+  }
+
+  .tarjeta-uva__nombre {
+    font-size: 36px;
+  }
+
+  .nosotros__titulo {
+    font-size: 90px;
+  }
+
+  .historia__fila,
+  .historia__fila--inversa {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .historia__fecha {
+    font-size: 100px;
+  }
+
+  .historia__texto {
+    font-size: 24px;
+  }
+
+  .pie {
+    padding-inline: 40px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+  }
+
+  .pie__logo {
+    width: 100%;
+    height: auto;
+  }
+
+  .pie__titulo,
+  .pie__ubicaciones {
+    font-size: 28px;
+  }
+
+  .contacto__contenido {
+    grid-template-columns: 40% minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .contacto__formulario {
+    padding-inline: 0;
+    font-size: 18px;
+  }
+
+  .contacto__campo input,
+  .contacto__campo textarea {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 700px) {
+  .encabezado {
+    padding: 12px 20px;
+    gap: 16px;
+  }
+
+  .encabezado__logo {
+    width: 76px;
+    height: 76px;
+  }
+
+  .encabezado__derecha {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+
+  .navegacion {
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+
+  .navegacion a {
+    font-size: 17px;
+  }
+
+  .inicio {
+    min-height: auto;
+  }
+
+  .inicio__hero {
+    padding: 48px 20px;
+    grid-template-columns: 1fr;
+  }
+
+  .inicio__titulo {
+    font-size: 40px;
+  }
+
+  .inicio__foto {
+    height: 460px;
+    border-radius: 30px;
+  }
+
+  .catalogo__hero {
+    min-height: 400px;
+  }
+
+  .catalogo__titulo {
+    padding-top: 40px;
+    font-size: 80px;
+  }
+
+  .catalogo__buscador {
+    margin: 48px 20px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .catalogo__buscador label {
+    font-size: 40px;
+  }
+
+  .catalogo__grid {
+    padding-inline: 20px;
+    grid-template-columns: 1fr;
+    row-gap: 48px;
+  }
+
+  .tarjeta-uva__imagen {
+    height: auto;
+    aspect-ratio: 500 / 284;
+  }
+
+  .tarjeta-uva__nombre {
+    font-size: 34px;
+  }
+
+  .producto,
+  .producto--cotton,
+  .producto--summer {
+    min-height: 100svh;
+    padding: 32px 16px;
+  }
+
+  .producto__tarjeta {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .producto__foto {
+    height: auto;
+    aspect-ratio: 541 / 272;
+  }
+
+  .producto__nombre {
+    font-size: 36px;
+  }
+
+  .producto__informacion {
+    margin-left: 0;
+    padding: 20px 12px;
+  }
+
+  .producto__meses {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 16px 8px;
+  }
+
+  .producto__anterior,
+  .producto__siguiente {
+    position: static;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    min-width: 130px;
+    margin-top: 24px;
+    padding-inline: 20px;
+  }
+
+  .producto__siguiente {
+    float: right;
+  }
+
+  .nosotros__hero {
+    min-height: auto;
+    padding: 100px 24px 150px;
+  }
+
+  .nosotros__titulo {
+    font-size: 54px;
+  }
+
+  .nosotros__introduccion {
+    margin-top: 40px;
+    font-size: 20px;
+  }
+
+  .historia {
+    padding: 40px 24px;
+  }
+
+  .historia--primera {
+    margin-top: -70px;
+  }
+
+  .historia__fila,
+  .historia__fila--inversa {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .historia__fecha {
+    font-size: 80px;
+  }
+
+  .historia__texto {
+    font-size: 22px;
+  }
+
+  .historia__foto,
+  .historia__foto--alta {
+    height: 280px;
+  }
+
+  .pie {
+    min-height: auto;
+    padding: 80px 24px 48px;
+    grid-template-columns: 1fr;
+  }
+
+  .pie__logo {
+    width: 180px;
+  }
+
+  .pie__ubicaciones {
+    gap: 24px;
+  }
+
+  .contacto__contenido {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .contacto__foto {
+    height: 320px;
+    border-radius: 0 0 40px 40px;
+  }
+
+  .contacto__principal {
+    padding: 40px 24px;
+  }
+
+  .contacto__titulo {
+    font-size: 44px;
+  }
+
+  .contacto__formulario {
+    min-height: auto;
+    margin-top: 32px;
+    padding: 0;
+  }
+
+  .contacto__campos,
+  .contacto__opciones {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contacto__enviar {
+    margin-top: 32px;
+  }
+}
