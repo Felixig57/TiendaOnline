@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Grupo Molina</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+  <header>
+    <a href="../index.html">
+      <img src="../imagenes/marca/logo-molina.png" alt="Logotipo de Grupo Molina">
+      <span>Grupo Molina</span>
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="uvas.html">Uvas</a></li>
+        <li><a href="logistica.html">Logística</a></li>
+        <li><a href="contacto.html" class="activo">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <img src="../imagenes/uvas/uvas-moradas.jpg" alt="Racimo de uvas moradas en la vid dentro de un viñedo">
+
+    <section>
+      <h1>Contáctanos</h1>
+
+      <form action="#" method="post">
+
+        <div>
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+        </div>
+
+        <div>
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" placeholder="Email" required>
+        </div>
+
+        <div>
+          <label for="ciudad">Ciudad y País</label>
+          <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad y País">
+        </div>
+
+        <fieldset>
+          <legend>Departamento de donde te comunicas *</legend>
+
+          <label>
+            <input type="radio" name="departamento" value="servicio" required>
+            Servicio a clientes
+          </label>
+
+          <label>
+            <input type="radio" name="departamento" value="marketing">
+            Marketing
+          </label>
+
+          <label>
+            <input type="radio" name="departamento" value="logistica">
+            Logística
+          </label>
+
+          <label>
+            <input type="radio" name="departamento" value="ventas">
+            Ventas
+          </label>
+        </fieldset>
+
+        <div>
+          <label for="mensaje">Mensaje *</label>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Mensaje" required></textarea>
+        </div>
+
+        <button type="submit">Enviar mensaje</button>
+
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Grupo Molina. Uvas de mesa de Sonora, México.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,11 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Online</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Grupo Molina vende uvas de mesa de Sonora por pallets a distribuidores. Compara variedades, planea tu carga y solicita una cotización.">
+  <title>Inicio | Grupo Molina - Uvas de mesa al mayoreo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&family=Montserrat:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <h1>Inicia Tienda Online </h1>
+
+  <a class="salto" href="#contenido">Saltar al contenido principal</a>
+
+  <header class="encabezado">
+    <a class="marca" href="index.html">
+      <img src="imagenes/marca/logoMolina.png" alt="Logotipo de Grupo Molina" width="56" height="56">
+      <span>Grupo Molina</span>
+    </a>
+
+    <nav aria-label="Navegación principal">
+      <ul class="menu">
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="paginas/nosotros.html">Nosotros</a></li>
+        <li><a href="paginas/uvas.html">Uvas</a></li>
+        <li><a href="paginas/Logistica.html">Logística</a></li>
+        <li><a href="paginas/Contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+
+    <section class="hero" aria-labelledby="titulo-inicio">
+      <div class="hero__texto">
+        <p class="etiqueta">Sonora, México / Uvas de mesa al mayoreo</p>
+
+        <h1 id="titulo-inicio">Del campo de Sonora a tu siguiente carga.</h1>
+
+        <p class="hero__descripcion">
+          Uvas de mesa por pallets para distribuidores. Compara variedades,
+          planea tu carga y solicita una cotización con Grupo Molina.
+        </p>
+
+        <p class="accion">
+          <a class="boton boton--principal" href="paginas/uvas.html">Explorar variedades</a>
+        </p>
+
+        <p class="nota">Venta B2B por pallets. Sin compra en línea ni pagos.</p>
+      </div>
+
+      <figure class="hero__imagen">
+        <img src="imagenes/general/FondoUvasTarjetas.jpg"
+             alt="Racimo de uvas verdes de mesa colgando de la vid, con hojas verdes al fondo"
+             width="600" height="800">
+        <figcaption>
+          <span class="figcaption__etiqueta">Raíz agrícola. Visión comercial.</span>
+          <strong>Uvas de mesa desde Sonora</strong>
+        </figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>&copy; 2026 Grupo Molina. Uvas de mesa de Sonora, México.</p>
+    <nav aria-label="Navegación del pie de página">
+      <ul class="pie__enlaces">
+        <li><a href="paginas/nosotros.html">Nosotros</a></li>
+        <li><a href="paginas/logistica.html">Logística</a></li>
+        <li><a href="paginas/contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </footer>
+
 </body>
 </html>
