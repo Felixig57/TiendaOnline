@@ -1,61 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalogo de Uvas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uvas | Grupo Molina</title>
+
 </head>
-
 <body>
-    <header>
-        <a href=#>Logo</a>
-        <h4>Grupo Molina</h4>
-        <nav>
-            <ul>
-                <li> <a href=#>Inicio</a> </li>
-                <li> <a href=#>Uvas</a> </li>
-                <li> <a href=#>Logistica</a> </li>
-                <li> <a href=#>Nosotros</a> </li>
-                <li> <a href=#>Contactos</a> </li>
-            </ul>
-        </nav>
-    <img src="FondoUvas.jpg" alt="Imagen de campo">
-    <h1>UVAS</h1>
-    </header>
-    <aside>
-        
-    </aside>
-    <section>
-        <div>
-            <img src="Img/CottonCandy.jpg" alt=" Uvas Cotton Candy">
-            <h3>Cotton Candy</h3>
-        </div>
-        <div>
-            <img src="Img/CottonCandy.jpg" alt=" Uvas Cotton Candy">
-            <h3>Cotton Candy</h3>
-        </div>
-        <div>
-            <img src="Img/SummerRoyals.jpg" alt=" Uvas Summer Royals">
-            <h3>Cotton Candy</h3>
-        </div>
-        <div>
-            <img src="Img/CandyHeart.jpg" alt=" Uvas Candy Heart">
-            <h3>Cotton Candy</h3>
-        </div>
-        <div>
-            <img src="Img/PrimeSeedless.jpg" alt=" Uvas Prime Seedless">
-            <h3>Cotton Candy</h3>
-        </div>
-         <div>
-            <img src="Img/SweetSapphire.jpg" alt=" Sweet Sapphire">
-            <h3>Cotton Candy</h3>
-        </div>
-        <div>
-            <img src="Img/Sugraones.jpg" alt=" Uvas Sugraones">
-            <h3>Cotton Candy</h3>
-        </div>
-    </section>
-</body>
 
+  <header>
+    <a href="../index.html">
+      <img src="../imagenes/marca/logoMolina.png" alt="Logotipo de Grupo Molina">
+      <span>Grupo Molina</span>
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../paginas/Nosotros.html">Nosotros</a></li>
+        <li><a href="../paginas/Catalogo.html" class="activo">Uvas</a></li>
+        <li><a href="../paginas/Logistica.html">Logística</a></li>
+        <li><a href="../paginas/Contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Portada -->
+    <section class="hero">
+      <h1>Uvas</h1>
+    </section>
+
+    <!-- Buscador -->
+    <aside class="catalogo__buscador">
+      <label for="buscar">Buscador</label>
+      <div class="catalogo__campo">
+        <input type="text" id="buscar">
+        <button type="button">
+          <img src="../imagenes/general/Lupa.png" alt="Buscar">
+        </button>
+      </div>
+    </aside>
+
+    <!-- Catálogo -->
+    <section class="catalogo__grid">
+      <div class="tarjeta-uva">
+        <a href="ProductoSelect.html">
+          <div class="tarjeta-uva__imagen">
+            <img src="../imagenes/uvas/CottonCandy.jpg" alt="Uvas Cotton Candy">
+          </div>
+          <h3 class="tarjeta-uva__nombre">Cotton Candy</h3>
+        </a>
+      </div>
+
+      <div class="tarjeta-uva">
+        <a href="ProductoSelect.html">
+          <div class="tarjeta-uva__imagen">
+            <img src="../imagenes/uvas/SummerRoyals.jpg" alt="Uvas Summer Royals">
+          </div>
+          <h3 class="tarjeta-uva__nombre">Summer Royals</h3>
+        </a>
+      </div>
+
+      <div class="tarjeta-uva">
+        <a href="ProductoSelect.html">
+          <div class="tarjeta-uva__imagen">
+            <img src="../imagenes/uvas/CandyHeart.jpg" alt="Uvas Candy Hearts">
+          </div>
+          <h3 class="tarjeta-uva__nombre">Candy Hearts</h3>
+        </a>
+      </div>
+
+      <div class="tarjeta-uva">
+        <a href="ProductoSelect.html">
+          <div class="tarjeta-uva__imagen">
+            <img src="../imagenes/uvas/PrimeSeedless.jpg" alt="Uvas Prime Seedless">
+          </div>
+          <h3 class="tarjeta-uva__nombre">Prime Seedless</h3>
+        </a>
+      </div>
+
+      <div class="tarjeta-uva">
+        <a href="ProductoSelect.html">
+          <div class="tarjeta-uva__imagen">
+            <img src="../imagenes/uvas/SweetSapphire.jpg" alt="Uvas Sweet Sapphire">
+          </div>
+          <h3 class="tarjeta-uva__nombre">Sweet Sapphire</h3>
+        </a>
+      </div>
+
+      <div class="tarjeta-uva">
+        <a href="ProductoSelect.html">
+          <div class="tarjeta-uva__imagen">
+            <img src="../imagenes/uvas/Sugraones.jpg" alt="Uvas Sugraones">
+          </div>
+          <h3 class="tarjeta-uva__nombre">Sugraones</h3>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Grupo Molina. Uvas de mesa de Sonora, México.</p>
+    <nav>
+      <ul>
+        <li><a href="../paginas/Nosotros.html">Nosotros</a></li>
+        <li><a href="../paginas/Logistica.html">Logística</a></li>
+        <li><a href="../paginas/Contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+</body>
 </html>

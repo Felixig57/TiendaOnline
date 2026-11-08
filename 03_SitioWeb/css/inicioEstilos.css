@@ -1,0 +1,106 @@
+.inicio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 10rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2.5rem;
+}
+
+.inicio-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.inicio-texto p {
+  margin: 0;
+}
+
+/* Línea pequeña de arriba */
+.inicio-texto p:first-child {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.inicio-texto h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.05;
+  color: var(--verde-oscuro);
+}
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.4rem;
+  background-color: var(--verde-claro);
+  color: var(--verde-oscuro);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.boton::after {
+  content: "↗";
+}
+
+.boton:hover {
+  background-color: var(--verde-oscuro);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.nota {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* Imagen con tarjeta encima */
+.inicio-imagen {
+  position: relative;
+  margin: 0;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.inicio-imagen img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.inicio-imagen figcaption {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.9rem 1.1rem;
+  background-color: rgba(242, 238, 234, 0.92);
+  border-radius: 0.6rem;
+}
+
+.inicio-imagen figcaption span {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+}
+
+.inicio-imagen figcaption strong {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+@media (max-width: 800px) {
+  .inicio {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.25rem;
+    gap: 2rem;
+  }
+}

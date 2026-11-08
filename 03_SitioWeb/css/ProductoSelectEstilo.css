@@ -1,0 +1,60 @@
+/* Solo ProductoSelect */
+
+.content {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.card {
+  background-color: #dddddd;
+  padding: 20px;
+}
+
+.card_img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.detalles {
+  background-color: white;
+  padding: 15px;
+}
+
+.meses,
+.presentaciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.meses li,
+.presentaciones li {
+  text-align: center;
+  font-size: 14px;
+}
+
+.punto {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: 0 auto 3px;
+  border: 2px solid #1E4D2B;
+}
+
+.meses .activo .punto {
+  background-color: #6BAA4A;
+}
+
+button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 30px;
+  background-color: #1E4D2B;
+  color: white;
+  border: none;
+}
