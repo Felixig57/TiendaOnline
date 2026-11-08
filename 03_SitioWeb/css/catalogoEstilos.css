@@ -1,0 +1,51 @@
+/* Solo Catalogo */
+
+.catalogo__buscador {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 15px 20px;
+  background-color: #dddddd;
+}
+
+.catalogo__campo {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.catalogo__campo input {
+  flex: 1;
+  padding: 8px;
+}
+
+.catalogo__campo button {
+  width: 45px;
+}
+
+.catalogo__campo button img {
+  width: 20px;
+}
+
+.catalogo__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.tarjeta-uva a {
+  color: #1E4D2B;
+  text-decoration: none;
+}
+
+.tarjeta-uva__imagen img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.tarjeta-uva__nombre {
+  margin: 10px 0 0;
+}

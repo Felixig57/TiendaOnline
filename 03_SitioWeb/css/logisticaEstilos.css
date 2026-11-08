@@ -1,0 +1,144 @@
+/* ---------- Portada ---------- */
+.portada {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 410px;
+  padding: 2.5rem;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.35)),
+    url("../imagenes/general/FondoUvas.jpg") center / cover no-repeat;
+  color: #fff;
+}
+
+.portada h1 {
+  margin: 0 auto;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.portada p {
+  margin: 0;
+  max-width: 480px;
+  font-size: 1.2rem;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------- Tipos de unidad ---------- */
+.unidades {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.unidades h2 {
+  margin: 0;
+  font-size: 2.4rem;
+  line-height: 1.1;
+  max-width: 6ch;
+}
+
+.unidades > p {
+  margin: 0.5rem 0 0;
+  font-size: 0.8rem;
+}
+
+.camiones {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.camiones figure {
+  margin: 0;
+  width: min(100%, 560px);
+}
+
+/* Zigzag: impares a la derecha, pares a la izquierda */
+.camiones figure:nth-child(odd) {
+  margin-left: auto;
+}
+
+.camiones figure:nth-child(even) {
+  margin-right: auto;
+}
+
+.camiones figure:nth-child(even) figcaption {
+  text-align: right;
+}
+
+.camiones figcaption h3 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 2rem;
+  font-weight: normal;
+  color: var(--verde-oscuro);
+}
+
+.camiones figcaption p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+/* ---------- Capacidad de carga ---------- */
+.capacidades {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 2rem 4rem;
+}
+
+.capacidades h2 {
+  margin: 0;
+  font-size: 2.4rem;
+}
+
+.capacidades table {
+  width: 100%;
+  margin: 1.5rem 0 1rem;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.capacidades caption {
+  text-align: left;
+  padding-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.capacidades th {
+  background-color: var(--verde-claro);
+  color: #fff;
+  font-weight: normal;
+}
+
+.capacidades th,
+.capacidades td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+}
+
+.capacidades tbody tr:nth-child(even) {
+  background-color: var(--crema);
+}
+
+.capacidades tbody td:first-child {
+  color: var(--verde-oscuro);
+}
+
+@media (max-width: 700px) {
+  .portada {
+    padding: 1.5rem 1rem;
+  }
+
+  .unidades,
+  .capacidades {
+    padding: 2rem 1rem;
+  }
+
+  .capacidades table {
+    display: block;
+    overflow-x: auto;
+  }
+}

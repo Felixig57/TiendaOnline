@@ -1,0 +1,129 @@
+:root {
+  --verde-claro: #6aaa4b;
+  --verde-oscuro: #1d4d22;
+  --crema: #f2eeea;
+  --rosa-panel: #d9c8c6;
+  --texto: #1d4d22;
+  --fuente-titulos: "Freeman", "Arial Narrow", sans-serif;
+  --fuente-formulario: "Montserrat", Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--crema);
+  color: var(--texto);
+  font-family: var(--fuente-titulos);
+  line-height: 1.4;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+/* ---------- Encabezado ---------- */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 2.5rem;
+  background-color: var(--verde-claro);
+  color: #fff;
+}
+
+header > a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+header img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+header nav ul {
+  display: flex;
+  gap: 1.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header nav a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding-bottom: 2px;
+}
+
+header nav a:hover,
+header nav a.activo {
+  border-bottom: 2px solid var(--verde-oscuro);
+}
+
+/* ---------- Pie de página ---------- */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.25rem 2.5rem;
+  background-color: var(--verde-oscuro);
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer ul {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    padding: 0.75rem 1rem;
+  }
+
+  header nav ul {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.25rem 1rem;
+  }
+}
