@@ -1,31 +1,72 @@
 /* Solo Catalogo */
+:root {
+  --crema: #f3eee9;
+  --verde: #2d5a3d;
+  --verde-oscuro: #1c4e1c;
+  --verde-claro: #6aa84b;
+  --verde-suave: #80b65f;
+  --verde-catalogo: #147645;
+  --lavanda: #d1bcd0;
+  --fuente-principal: "Freeman", sans-serif;
+}
+/* ENCABEZADO */
 
+.titulo{
+font-size: clamp(2.5rem, 6vw, 4rem);
+font-weight: 700;
+color: var(--crema);
+text-align: center;
+margin: 0;
+
+}
+.hero{
+  background-image: url(../imagenes/general/FondoUvas.jpg);
+  background-size: cover;
+  background-position: center; 
+  object-fit: fill;
+  width: 100%;
+  min-height: 410px;
+  display: flex;
+  justify-content: center;
+   align-items: center;
+}
+
+
+
+/* BUSCADOR */
 .catalogo__buscador {
   max-width: 1000px;
   margin: 20px auto;
   padding: 15px 20px;
-  background-color: #dddddd;
+  background-color: var(--verde-claro);
+  border-radius: 15px; 
 }
 
 .catalogo__campo {
   display: flex;
   gap: 10px;
   margin-top: 5px;
+  background-color: var(--verde-claro);
 }
 
 .catalogo__campo input {
   flex: 1;
   padding: 8px;
+  border-radius: 15px;
+  border: none;
 }
 
 .catalogo__campo button {
   width: 45px;
+  border-radius: 60px;
+  border: none; 
 }
 
 .catalogo__campo button img {
-  width: 20px;
+  width: 25px;
 }
 
+/* PRODUCTOS */
 .catalogo__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -41,6 +82,7 @@
 }
 
 .tarjeta-uva__imagen img {
+  border-radius: 15px;
   width: 100%;
   height: 250px;
   object-fit: cover;
