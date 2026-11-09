@@ -7,19 +7,28 @@
 }
 
 .card {
-  background-color: #dddddd;
   padding: 20px;
+  border-radius: 20px;
+  background-image: repeating-linear-gradient(
+    180deg, 
+    rgba(202, 156, 156, 1) 0px,
+    rgba(202, 156, 156, 1) 2px,
+    rgba(217, 200, 200, 1) 2px,
+    rgba(217, 200, 200, 1) 50px
+  );
 }
 
 .card_img {
   width: 100%;
   height: 250px;
   object-fit: cover;
+  border-radius: 20px;
 }
 
 .detalles {
   background-color: white;
   padding: 15px;
+  border-radius: 20px;
 }
 
 .meses,
@@ -44,6 +53,7 @@
   height: 18px;
   margin: 0 auto 3px;
   border: 2px solid #1E4D2B;
+  border-radius: 50px;
 }
 
 .meses .activo .punto {
@@ -54,7 +64,23 @@ button {
   display: block;
   margin: 20px auto 0;
   padding: 10px 30px;
-  background-color: #1E4D2B;
-  color: white;
+  background-color: #d9c8c8;
+  color: #1d4d22;
   border: none;
+  border-radius: 20px;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -15px; 
+  
+  background-image: var(--bg-img);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  filter: blur(8px); 
+  z-index: -1;    
 }
